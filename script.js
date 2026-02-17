@@ -7,8 +7,8 @@ const menuBtn = document.getElementById("menuBtn");
 const mobileLinks = document.getElementById("mobileLinks");
 
 menuBtn?.addEventListener("click", () => {
-  const isOpen = mobileLinks?.style.display === "grid";
   if (!mobileLinks) return;
+  const isOpen = mobileLinks.style.display === "grid";
   mobileLinks.style.display = isOpen ? "none" : "grid";
   mobileLinks.style.gap = "10px";
 });
@@ -23,10 +23,9 @@ const observer = new IntersectionObserver((entries) => {
 
 reveals.forEach((el) => observer.observe(el));
 
-// ===== Page transition for internal navigation
-function isInternalHtmlLink(a) {
-  const href = a.getAttribute("href") || "";
-  return href.endsWith(".html") || href.includes(".html#") || href.startsWith("index.html") || href.startsWith("projects.html");
+// ===== Page transition for internal navigation (only .html links)
+function isInternalHtmlLink(href) {
+  return href && (href.endsWith(".html") || href.includes(".html#") || href.startsWith("index.html") || href.startsWith("projects.html"));
 }
 
 document.querySelectorAll("a.navlink").forEach((a) => {
@@ -34,11 +33,10 @@ document.querySelectorAll("a.navlink").forEach((a) => {
     const href = a.getAttribute("href");
     if (!href) return;
 
-    // allow normal for external links / mailto / tel
-    if (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) return;
+    // allow normal behavior for external / mailto / tel / pdf
+    if (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:") || href.endsWith(".pdf")) return;
 
-    // handle internal html navigation with fade-out
-    if (isInternalHtmlLink(a)) {
+    if (isInternalHtmlLink(href)) {
       e.preventDefault();
       document.body.classList.add("fade-out");
       setTimeout(() => {
