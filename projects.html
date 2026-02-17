@@ -1,53 +1,131 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects | Alhanof</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Alhanof</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="fade-in">
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo navlink" href="index.html">Alhanof</a>
 
-<header class="nav">
-<div class="container nav-inner">
-<a class="logo" href="index.html">Alhanof</a>
+      <nav class="links">
+        <a class="navlink" href="index.html">About</a>
+        <a class="navlink" href="projects.html">Projects</a>
+        <a class="navlink" href="index.html#contact">Contact</a>
+      </nav>
 
-<nav class="links">
-<a href="index.html">About</a>
-<a href="cv.pdf" target="_blank">Resume</a>
-</nav>
-</div>
-</header>
+      <button class="menu-btn" aria-label="Open menu" id="menuBtn">☰</button>
+    </div>
 
-<section class="section center">
+    <div class="mobile-links container" id="mobileLinks">
+      <a class="navlink" href="index.html">About</a>
+      <a class="navlink" href="projects.html">Projects</a>
+      <a class="navlink" href="index.html#contact">Contact</a>
+    </div>
+  </header>
 
-<h1>Projects</h1>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="reveal">Projects</h1>
+        <p class="lead reveal">
+          Selected work across AI, health-tech, UX/UI, and system documentation.
+        </p>
 
-<div class="cards">
+        <div class="cards reveal">
+          <article class="card project">
+            <img class="thumb" src="assets/basira.png" alt="Basira preview" />
+            <div class="project-head">
+              <h3>Basira (AI • Eye Tracking)</h3>
+              <span class="badge">Live</span>
+            </div>
+            <p class="muted">
+              AI-supported early autism indicators detection using eye-tracking.
+            </p>
+            <div class="project-actions">
+              <a class="btn small" href="https://alhanof4f.github.io/baseera-landing/" target="_blank" rel="noreferrer">View Site</a>
+            </div>
+          </article>
 
-<div class="card">
-<h3>Basira — AI Autism Detection</h3>
-<p>
-AI system that detects early autism indicators using eye-tracking analysis and machine learning.
-</p>
+          <article class="card project">
+            <div class="project-head">
+              <h3>AllergyBud (Health-Tech App)</h3>
+              <span class="badge">App</span>
+            </div>
+            <p class="muted">
+              Food allergy assistant concept: barcode scanning for ingredients, safe recommendations, and support features.
+            </p>
+          </article>
 
-<a class="btn" href="https://alhanof4f.github.io/baseera-landing/" target="_blank">
-View Project
-</a>
-</div>
+          <article class="card project">
+            <div class="project-head">
+              <h3>Diabetes Model Improvement</h3>
+              <span class="badge">AI</span>
+            </div>
+            <p class="muted">
+              Improved a model workflow and experimentation process for better performance and reliability.
+            </p>
+          </article>
 
-<div class="card">
-<h3>Data Analysis Projects</h3>
-<p>
-Multiple data analysis tasks including data cleaning, visualization,
-pattern detection, and insights generation using Python.
-</p>
-</div>
+          <article class="card project">
+            <img class="thumb" src="assets/helptrip.jpg" alt="HelpTrip preview" />
+            <div class="project-head">
+              <h3>Help Trip (UX/UI)</h3>
+              <span class="badge">Design</span>
+            </div>
+            <p class="muted">
+              Accessible transportation app interface screens and user flow design.
+            </p>
+          </article>
 
-</div>
+          <article class="card project">
+            <div class="project-head">
+              <h3>Multiple UI Screens & Product Interfaces</h3>
+              <span class="badge">UI</span>
+            </div>
+            <p class="muted">
+              Designed multiple interfaces for apps and dashboards with clean layout and clear user journeys.
+            </p>
+          </article>
 
-</section>
+          <article class="card project">
+            <div class="project-head">
+              <h3>System Work & Documentation</h3>
+              <span class="badge">SRS/BRS</span>
+            </div>
+            <p class="muted">
+              Requirements documentation, system analysis, and structured writing for project clarity and delivery.
+            </p>
+          </article>
 
+          <article class="card project">
+            <div class="project-head">
+              <h3>Accessibility Improvements (Web)</h3>
+              <span class="badge">A11y</span>
+            </div>
+            <p class="muted">
+              Improved web accessibility alignment with best practices and digital governance guidelines.
+            </p>
+          </article>
+        </div>
+
+        <div class="note reveal">
+          Want a deeper project page for each project? Next step we can create /projects/basira.html etc.
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> Alhanof.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

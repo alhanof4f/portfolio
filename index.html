@@ -1,63 +1,315 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alhanof Portfolio</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alhanof | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="fade-in">
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Alhanof</a>
 
-<header class="nav">
-<div class="container nav-inner">
-<a class="logo" href="index.html">Alhanof</a>
+      <nav class="links">
+        <a class="navlink" href="index.html">About</a>
+        <a class="navlink" href="projects.html">Projects</a>
+        <a class="navlink" href="#contact">Contact</a>
+      </nav>
 
-<nav class="links">
-<a href="projects.html">Projects</a>
-<a href="cv.pdf" target="_blank">Resume</a>
-<a href="#contact">Contact</a>
-</nav>
-</div>
-</header>
+      <button class="menu-btn" aria-label="Open menu" id="menuBtn">☰</button>
+    </div>
 
-<section class="hero full">
+    <div class="mobile-links container" id="mobileLinks">
+      <a class="navlink" href="index.html">About</a>
+      <a class="navlink" href="projects.html">Projects</a>
+      <a class="navlink" href="#contact">Contact</a>
+    </div>
+  </header>
 
-<div class="container center">
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <p class="pill">Computer Science Graduate • AI • UX/UI • GRC</p>
 
-<h1>Alhanof Alfadhel</h1>
+          <h1>
+            Hi, I'm <span class="accent">Alhanof</span>.<br />
+            I build intelligent & user-centered solutions.
+          </h1>
 
-<p class="lead">
-Computer Science graduate specializing in Artificial Intelligence and Data Analysis,
-with strong experience in system analysis, machine learning, and building smart data-driven solutions.
-</p>
+          <p class="subtitle">
+            A portfolio showcasing AI projects, health-tech solutions, system work, and UI design.
+          </p>
 
-<p class="about-text">
-I am passionate about creating intelligent systems that solve real-world problems using data and AI.
-My experience includes developing AI-based projects, analyzing data patterns,
-and designing technical solutions that improve decision-making and user experience.
-I have hands-on skills in Python, SQL, Power BI, machine learning, and system documentation.
-I also led the development of an AI-based autism detection project using eye-tracking technology,
-demonstrating my ability to combine innovation, research, and practical implementation.
-</p>
+          <div class="cta">
+            <a class="btn navlink" href="projects.html">View Projects</a>
+            <a class="btn ghost navlink" href="#contact">Contact</a>
+          </div>
 
-<div class="buttons">
-<a class="btn" href="projects.html">View Projects</a>
-<a class="btn ghost" href="cv.pdf" target="_blank">Download CV</a>
-</div>
+          <div class="mini">
+            <a href="https://github.com/alhanof4f" target="_blank" rel="noreferrer">GitHub</a>
+            <span>•</span>
+            <a href="https://www.linkedin.com/in/alhanof-alfadhel" target="_blank" rel="noreferrer">LinkedIn</a>
+            <span>•</span>
+            <a href="mailto:alhanofx2@gmail.com">Email</a>
+            <span>•</span>
+            <a href="tel:+966536779383">Call</a>
+          </div>
+        </div>
 
-</div>
-</section>
+        <div class="card hero-card reveal">
+          <h3>Featured</h3>
+          <p class="muted">
+            Basira — AI-supported early autism indicators detection using eye-tracking.
+          </p>
 
-<section id="contact" class="contact">
-<h2>Contact</h2>
+          <div class="card-actions">
+            <a class="btn small" href="https://alhanof4f.github.io/baseera-landing/" target="_blank" rel="noreferrer">
+              View Basira
+            </a>
+            <a class="btn small ghost navlink" href="projects.html">All Projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="contact-links">
-<a href="mailto:alhanofx2@gmail.com">Email</a>
-<a href="https://github.com/alhanof4f" target="_blank">GitHub</a>
-<a href="https://www.linkedin.com/in/alhanof-alfadhel" target="_blank">LinkedIn</a>
-</div>
-</section>
+    <!-- QUICK STATS -->
+    <section class="section">
+      <div class="container">
+        <h2 class="reveal">Quick Stats</h2>
 
+        <div class="stats reveal">
+          <div class="stat">
+            <div class="stat-num">6+</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">12+</div>
+            <div class="stat-label">Skills</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">2</div>
+            <div class="stat-label">Awards</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="reveal">About Me</h2>
+
+        <p class="lead reveal">
+          Computer Science graduate specializing in Artificial Intelligence, with strong interest in building
+          smart solutions and user-centered digital products.
+        </p>
+
+        <p class="about-text reveal">
+          I work at the intersection of AI, product thinking, and interface design. I’ve built real projects in
+          health-tech and AI, including an eye-tracking based solution for early autism indicators (Basira),
+          and a food allergy assistant app (AllergyBud). I enjoy turning complex requirements into clear system
+          structures, readable documentation, and clean interfaces that people actually love using.
+        </p>
+
+        <div class="grid-2">
+          <div class="card reveal">
+            <h3>What I do</h3>
+            <ul>
+              <li>AI project development & model improvement</li>
+              <li>Health-tech apps & user safety solutions</li>
+              <li>System work & documentation (SRS/BRS)</li>
+              <li>UX/UI design for web & mobile interfaces</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3>Highlights</h3>
+            <ul>
+              <li>Built Basira project website & product concept</li>
+              <li>Developed AllergyBud food-allergy assistant concept</li>
+              <li>Worked on diabetes model improvement (AI)</li>
+              <li>Designed multiple UI screens for apps & dashboards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section class="section">
+      <div class="container">
+        <h2 class="reveal">Awards</h2>
+
+        <div class="cards two reveal">
+          <article class="card">
+            <h3>1st Place — Most Popular Project</h3>
+            <p class="muted">Recognized for Basira as a standout project with strong public engagement.</p>
+          </article>
+
+          <article class="card">
+            <h3>2nd Place — Innovation Incubator Competition</h3>
+            <p class="muted">Awarded for innovation, solution quality, and presentation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section">
+      <div class="container">
+        <h2 class="reveal">Certifications</h2>
+
+        <div class="card reveal">
+          <ul class="cols">
+            <li>Certified GRC Professional (GRCP™) — OCEG</li>
+            <li>Power BI (Satr Platform)</li>
+            <li>Data Analysis Program (Satr Platform)</li>
+            <li>Data Science & AI Program (Satr Platform)</li>
+            <li>Advanced AI Concepts & Applications (SDAIA)</li>
+            <li>AI Principles (SDAIA)</li>
+            <li>Women Elevate Program (SDAIA • Microsoft • UNESCO)</li>
+            <li>CS50x Introduction to Computer Science (Harvard)</li>
+            <li>Microsoft Azure AI Fundamentals</li>
+            <li>Google Data Fundamentals</li>
+            <li>Master the Basics (edX)</li>
+            <li>Intro Courses & Professional Workshops (various)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="reveal">Skills</h2>
+
+        <div class="grid-3 reveal">
+          <div class="card">
+            <h3>Technical</h3>
+            <ul>
+              <li>Python</li>
+              <li>SQL</li>
+              <li>Machine Learning</li>
+              <li>Model Evaluation</li>
+              <li>Feature Engineering</li>
+              <li>Git / GitHub</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Product & Design</h3>
+            <ul>
+              <li>UX/UI Design</li>
+              <li>Wireframing</li>
+              <li>Prototyping</li>
+              <li>User-Centered Design</li>
+              <li>Design Systems</li>
+              <li>Responsive Web UI</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Professional</h3>
+            <ul>
+              <li>System Analysis</li>
+              <li>SRS / BRS Documentation</li>
+              <li>Communication</li>
+              <li>Team Leadership</li>
+              <li>Problem Solving</li>
+              <li>Time Management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS PREVIEW -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="row reveal">
+          <h2>Projects Preview</h2>
+          <a class="btn small navlink" href="projects.html">Open All Projects</a>
+        </div>
+
+        <div class="cards reveal">
+          <article class="card project">
+            <img class="thumb" src="assets/basira.png" alt="Basira preview" />
+            <div class="project-head">
+              <h3>Basira (AI • Eye Tracking)</h3>
+              <span class="badge">Featured</span>
+            </div>
+            <p class="muted">AI-supported early autism indicators detection using eye tracking.</p>
+            <div class="project-actions">
+              <a class="btn small" href="https://alhanof4f.github.io/baseera-landing/" target="_blank" rel="noreferrer">View</a>
+              <a class="btn small ghost navlink" href="projects.html">Details</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <img class="thumb" src="assets/helptrip.jpg" alt="HelpTrip preview" />
+            <div class="project-head">
+              <h3>Help Trip (UI/UX)</h3>
+              <span class="badge">Design</span>
+            </div>
+            <p class="muted">Accessible transportation app UI screens and user flow design.</p>
+            <div class="project-actions">
+              <a class="btn small ghost navlink" href="projects.html">Details</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project-head">
+              <h3>AllergyBud (Health-Tech)</h3>
+              <span class="badge">App</span>
+            </div>
+            <p class="muted">Food allergy assistant with barcode scanning & safe recommendations.</p>
+            <div class="project-actions">
+              <a class="btn small ghost navlink" href="projects.html">Details</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="reveal">Contact</h2>
+
+        <div class="card contact-card reveal">
+          <p class="lead">
+            Want to collaborate or discuss opportunities? Reach out:
+          </p>
+
+          <div class="contact-links">
+            <a class="btn" href="mailto:alhanofx2@gmail.com">Email Me</a>
+            <a class="btn ghost" href="https://github.com/alhanof4f" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/alhanof-alfadhel" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn ghost" href="tel:+966536779383">Call Me</a>
+          </div>
+
+          <p class="muted small">
+            Resume button will be added in the final step (as you requested).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> Alhanof. Built with GitHub Pages.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
