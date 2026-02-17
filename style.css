@@ -212,29 +212,6 @@ h2{font-size:30px; margin:0 0 16px}
   color:var(--muted);
 }
 
-/* ===== FIX: About icons كبيرة (تصغير + شكل مرتب) ===== */
-.about-icons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  align-items:center;
-  margin-top:14px;
-}
-.about-icons img{
-  width:32px;
-  height:32px;
-  object-fit:contain;
-  border-radius:12px;
-  padding:8px;
-  background: rgba(255,255,255,.04);
-  border:1px solid var(--border);
-  transition: transform .18s ease, filter .18s ease;
-}
-.about-icons img:hover{
-  transform: translateY(-2px) scale(1.06);
-  filter: brightness(1.05);
-}
-
 /* ===== Animations: reveal on scroll ===== */
 .reveal{
   opacity:0;
@@ -262,6 +239,60 @@ body.fade-out{
   to{opacity:0; transform: translateY(-4px);}
 }
 
+/* =========================
+   FIX: ICONS كبيرة (About + Contact)
+   هذا هو الحل اللي يمنع شعار لينكدن يكبر
+========================= */
+.about-icons,
+.icon-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  align-items:center;
+  margin-top:14px;
+}
+
+/* رابط الأيقونة نفسه */
+.about-icons a,
+.icon-btn{
+  width:44px;
+  height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid var(--border);
+  border-radius:14px;
+  background: rgba(255,255,255,.03);
+  transition: transform .18s ease, filter .18s ease, border-color .18s ease;
+}
+
+/* إذا الأيقونات صور */
+.about-icons a img{
+  width:22px !important;
+  height:22px !important;
+  object-fit:contain;
+  padding:0 !important;
+  background:transparent !important;
+  border:none !important;
+  border-radius:0 !important;
+}
+
+/* إذا الأيقونات SVG (مثل Contact) */
+.icon-btn svg{
+  width:22px;
+  height:22px;
+  fill: var(--muted);
+}
+.about-icons a:hover,
+.icon-btn:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  border-color: rgba(110,231,255,.22);
+}
+.icon-btn:hover svg{
+  fill: var(--text);
+}
+
 @media (max-width: 900px){
   .hero-grid{grid-template-columns:1fr}
   .cards{grid-template-columns:1fr}
@@ -273,6 +304,15 @@ body.fade-out{
   .links{display:none}
   .menu-btn{display:inline-flex}
 
-  /* عشان الأيقونات تصير ألطف بالجوال */
-  .about-icons img{width:28px;height:28px;padding:7px}
+  .about-icons a,
+  .icon-btn{
+    width:42px;
+    height:42px;
+    border-radius:13px;
+  }
+  .about-icons a img,
+  .icon-btn svg{
+    width:20px !important;
+    height:20px !important;
+  }
 }
