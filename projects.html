@@ -1,269 +1,132 @@
-:root{
-  --bg:#0b1020;
-  --card:rgba(255,255,255,.03);
-  --text:#eaf0ff;
-  --muted:#b9c4e6;
-  --accent:#6ee7ff;
-  --border:rgba(255,255,255,.10);
-  --shadow:0 18px 50px rgba(0,0,0,.40);
-}
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Alhanof</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background:
-    radial-gradient(1200px 700px at 10% 0%, rgba(110,231,255,.18), transparent 60%),
-    radial-gradient(900px 650px at 90% 10%, rgba(124,58,237,.15), transparent 60%),
-    var(--bg);
-  color:var(--text);
-}
+<body class="fade-in">
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo navlink" href="index.html">Alhanof</a>
 
-a{color:inherit;text-decoration:none}
-.container{width:min(1100px, 92%); margin:0 auto}
+      <nav class="links">
+        <a class="navlink" href="index.html#about">About</a>
+        <a class="navlink" href="projects.html">Projects</a>
+        <a class="navlink resume-link" href="cv.pdf" target="_blank" rel="noreferrer">Resume</a>
+        <a class="navlink" href="index.html#contact">Contact</a>
+      </nav>
 
-.nav{
-  position:sticky; top:0; z-index:50;
-  backdrop-filter: blur(10px);
-  background: rgba(11,16,32,.72);
-  border-bottom:1px solid var(--border);
-}
-.nav-inner{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:14px 0;
-}
-.logo{font-weight:800; letter-spacing:.5px}
-.links{display:flex; gap:18px}
-.links a{color:var(--muted)}
-.links a:hover{color:var(--text)}
+      <button class="menu-btn" aria-label="Open menu" id="menuBtn">☰</button>
+    </div>
 
-.resume-link{
-  padding:8px 12px;
-  border-radius:999px;
-  border:1px solid rgba(110,231,255,.28);
-  background: rgba(110,231,255,.12);
-  color:var(--text) !important;
-}
+    <div class="mobile-links container" id="mobileLinks">
+      <a class="navlink" href="index.html#about">About</a>
+      <a class="navlink" href="projects.html">Projects</a>
+      <a class="navlink resume-link" href="cv.pdf" target="_blank" rel="noreferrer">Resume</a>
+      <a class="navlink" href="index.html#contact">Contact</a>
+    </div>
+  </header>
 
-.menu-btn{
-  display:none;
-  background:transparent; border:1px solid var(--border);
-  color:var(--text); padding:8px 10px; border-radius:10px;
-}
-.mobile-links{
-  display:none; padding:0 0 14px 0;
-  gap:10px;
-}
-.mobile-links a{
-  display:block;
-  padding:10px 12px;
-  border:1px solid var(--border);
-  border-radius:12px;
-  color:var(--muted);
-  background: rgba(255,255,255,.02);
-}
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="reveal">Projects</h1>
 
-.hero{padding:54px 0 18px}
-.hero-grid{
-  display:grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap:18px;
-  align-items:stretch;
-}
-.hero-grid--simple{align-items:center}
-.name-title{
-  font-size: clamp(34px, 5vw, 56px);
-  line-height:1.05;
-  margin:0 0 10px;
-  letter-spacing:.2px;
-}
-.subtitle{color:var(--muted); font-size:18px; max-width:56ch; margin:0 0 14px}
+        <div class="cards reveal">
+          <!-- Basira -->
+          <article class="card project">
+            <img class="thumb" src="assets/basira.png" alt="Basira preview" />
+            <div class="project-head">
+              <h3>Basira (Landing)</h3>
+              <span class="badge">Live</span>
+            </div>
+            <p class="muted">
+              Landing page only — the full Basira platform is private and not published.
+            </p>
+            <div class="project-actions">
+              <a class="btn small" href="https://alhanof4f.github.io/baseera-landing/" target="_blank" rel="noreferrer">View Landing</a>
+            </div>
+          </article>
 
-.cta{display:flex; gap:12px; margin:12px 0 0}
-.btn{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding:12px 16px;
-  border-radius:14px;
-  border:1px solid rgba(110,231,255,.25);
-  background: rgba(110,231,255,.13);
-  color:var(--text);
-  box-shadow: var(--shadow);
-  transition: transform .18s ease, filter .18s ease;
-}
-.btn:hover{transform: translateY(-2px); filter: brightness(1.05)}
-.btn.ghost{
-  background: rgba(255,255,255,.03);
-  border:1px solid var(--border);
-  box-shadow:none;
-  color:var(--muted);
-}
-.btn.small{padding:10px 12px; border-radius:12px; box-shadow:none}
-.resume-cta{
-  border:1px solid rgba(110,231,255,.45);
-  background: rgba(110,231,255,.18);
-}
+          <!-- AllergyBud -->
+          <article class="card project">
+            <img class="thumb" src="assets/a1.png" alt="AllergyBud preview" />
+            <div class="project-head">
+              <h3>AllergyBud</h3>
+              <span class="badge">App</span>
+            </div>
+            <p class="muted">
+              Personalized allergy assistant that helps users scan product barcodes to detect allergen ingredients instantly,
+              offers safe food recommendations, and supports a community with advice and shared experiences.
+            </p>
+          </article>
 
-.section{padding:46px 0}
-h1{margin:0 0 12px}
-h2{font-size:30px; margin:0 0 16px}
-.about-text{color:#cdd7f6; font-size:16px; line-height:1.85; max-width:85ch}
+          <!-- Diabetes -->
+          <article class="card project">
+            <div class="project-head">
+              <h3>Diabetes Prediction</h3>
+              <span class="badge">AI</span>
+            </div>
+            <p class="muted">
+              Diabetes prediction using a Random Forest model and a Streamlit app, based on medical data.
+            </p>
+          </article>
 
-.card{
-  background: var(--card);
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:18px;
-  box-shadow: var(--shadow);
-}
-.card:hover{
-  border-color: rgba(110,231,255,.22);
-  box-shadow: 0 20px 60px rgba(0,0,0,.55);
-}
+          <!-- Help Trip -->
+          <article class="card project">
+            <img class="thumb" src="assets/helptrip.jpg" alt="Help Trip preview" />
+            <div class="project-head">
+              <h3>Help Trip (UI/UX)</h3>
+              <span class="badge">Design</span>
+            </div>
+            <p class="muted">
+              Accessible transportation app interface screens and user flow design.
+            </p>
+          </article>
 
-.hero-card h3{margin-top:0}
-.muted{color:var(--muted)}
-.small{font-size:13px}
+          <article class="card project">
+            <div class="project-head">
+              <h3>UI Screens & Product Interfaces</h3>
+              <span class="badge">UI</span>
+            </div>
+            <p class="muted">
+              Designed multiple interfaces for apps and dashboards with clear user journeys.
+            </p>
+          </article>
 
-.grid-2{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:16px;
-  margin-top:16px;
-}
+          <article class="card project">
+            <div class="project-head">
+              <h3>System Work & Documentation</h3>
+              <span class="badge">SRS/BRS</span>
+            </div>
+            <p class="muted">
+              Requirements documentation, system analysis, and structured writing for clarity and delivery.
+            </p>
+          </article>
 
-.tags{display:flex; flex-wrap:wrap; gap:8px}
-.tags span{
-  font-size:12px;
-  padding:7px 10px;
-  border-radius:999px;
-  border:1px solid var(--border);
-  background: rgba(255,255,255,.03);
-  color:var(--muted);
-}
+          <article class="card project">
+            <div class="project-head">
+              <h3>Accessibility Improvements (Web)</h3>
+              <span class="badge">A11y</span>
+            </div>
+            <p class="muted">
+              Improved accessibility alignment with best practices and digital governance guidelines.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-.cards{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:16px;
-  margin-top:16px;
-}
-.cards.two{grid-template-columns: repeat(2, 1fr);}
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> Alhanof.</p>
+      </div>
+    </footer>
+  </main>
 
-.project-head{display:flex; align-items:center; justify-content:space-between; gap:10px}
-.badge{
-  font-size:12px;
-  padding:6px 10px;
-  border-radius:999px;
-  border:1px solid var(--border);
-  color:var(--muted);
-  background: rgba(255,255,255,.03);
-}
-.project-actions{display:flex; gap:10px; margin-top:14px}
-
-.thumb{
-  width:100%;
-  height:170px;
-  object-fit: cover;
-  border-radius:14px;
-  border:1px solid var(--border);
-  margin-bottom:12px;
-  background: rgba(255,255,255,.02);
-}
-
-.stats{
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap:14px;
-  margin-top:12px;
-}
-.stat{
-  background: rgba(255,255,255,.03);
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:16px;
-  text-align:center;
-}
-.stat-num{
-  font-size:28px;
-  font-weight:900;
-  letter-spacing:.5px;
-  color:var(--accent);
-}
-.stat-label{color:var(--muted); margin-top:6px}
-
-.row{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:14px;
-}
-
-.resume-card{
-  border-color: rgba(110,231,255,.22);
-  background: linear-gradient(180deg, rgba(110,231,255,.10), rgba(255,255,255,.02));
-}
-.resume-card-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  flex-wrap:wrap;
-}
-.resume-title{margin:0 0 6px}
-.resume-sub{margin:0}
-.resume-actions{display:flex; gap:10px; flex-wrap:wrap}
-
-.contact-icons-card{padding:20px}
-.icon-row{display:flex; gap:14px; flex-wrap:wrap}
-.icon-btn{
-  width:52px; height:52px;
-  display:inline-flex; align-items:center; justify-content:center;
-  border-radius:16px;
-  border:1px solid var(--border);
-  background: rgba(255,255,255,.03);
-  transition: transform .18s ease, filter .18s ease, border-color .18s ease;
-}
-.icon-btn:hover{
-  transform: translateY(-2px);
-  filter: brightness(1.05);
-  border-color: rgba(110,231,255,.22);
-}
-.icon-btn svg{
-  width:22px; height:22px;
-  fill: var(--text);
-  opacity:.95;
-}
-
-.footer{
-  padding:30px 0 50px;
-  border-top:1px solid var(--border);
-  color:var(--muted);
-}
-
-/* reveal */
-.reveal{
-  opacity:0;
-  transform: translateY(18px);
-  transition: opacity .8s ease, transform .8s ease;
-}
-.reveal.show{
-  opacity:1;
-  transform: translateY(0);
-}
-
-/* page transition */
-body.fade-in{ animation: pageIn .35s ease both; }
-body.fade-out{ animation: pageOut .25s ease both; }
-@keyframes pageIn{ from{opacity:0; transform: translateY(6px);} to{opacity:1; transform: translateY(0);} }
-@keyframes pageOut{ from{opacity:1; transform: translateY(0);} to{opacity:0; transform: translateY(-4px);} }
-
-@media (max-width: 900px){
-  .hero-grid{grid-template-columns:1fr}
-  .cards{grid-template-columns:1fr}
-  .cards.two{grid-template-columns:1fr}
-  .grid-2{grid-template-columns:1fr}
-  .stats{grid-template-columns:1fr 1fr}
-  .links{display:none}
-  .menu-btn{display:inline-flex}
-}
+  <script src="script.js"></script>
+</body>
+</html>
