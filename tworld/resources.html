@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Bootstrap link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Stylesheet link -->
+    <link href="styles.css" rel="stylesheet">
+    <title>Tea | Resources</title>
+    <script>
+
+    function play_sound(url) {
+      new Audio(url).play();
+    }
+    </script>
+  </head>
+  <body>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html"><b>Tea world</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Types.html">Types of Tea</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="uses.html">Uses</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="resources.html">Resources</a>
+          </li>
+        </ul>
+        <button onclick="play_sound('trees.mp3')" type="button" class="btn btn-outline-info"><img src="images/p3.jpg" alt="Image of Tea" width="50"></button>
+      </div>
+    </nav>
+
+    <h1>Resources</h1>
+    <hr class="solid">
+
+    <p>Along with the links on the other pages, you can find more information below:</p>
+    <ul class="indent" style="padding-bottom: 30px">
+      <li><a target="_blank" href="https://en.m.wikipedia.org/wiki/Tea">Definition</a></li>
+      <li><a target="_blank" href="https://www.pennmedicine.org/updates/blogs/health-and-wellness/2019/december/health-benefits-of-tea">Benifits of Tea</a></li>
+      <li><a target="_blank" href="https://livezesty.com/blogs/zest-blog/most-popular-types-of-tea-around-the-world">Types of Tea</a></li>
+      <li><a target="_blank" href="https://www.britannica.com/topic/tea-beverage">General information about Tea world</a></li>
+      <li><a target="_blank" href="https://en.m.wikipedia.org/wiki/Camellia_sinensis">Another information about trees of tea</a></li>
+    </ul>
+  </body>
+</html>
