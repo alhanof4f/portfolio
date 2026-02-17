@@ -1,8 +1,8 @@
-// ===== Year
+// Year
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
-// ===== Mobile menu
+// Mobile menu
 const menuBtn = document.getElementById("menuBtn");
 const mobileLinks = document.getElementById("mobileLinks");
 
@@ -13,7 +13,7 @@ menuBtn?.addEventListener("click", () => {
   mobileLinks.style.gap = "10px";
 });
 
-// ===== Reveal on scroll
+// Reveal on scroll
 const reveals = document.querySelectorAll(".reveal");
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -23,9 +23,14 @@ const observer = new IntersectionObserver((entries) => {
 
 reveals.forEach((el) => observer.observe(el));
 
-// ===== Page transition for internal navigation (only .html links)
+// Page transition for internal html links only
 function isInternalHtmlLink(href) {
-  return href && (href.endsWith(".html") || href.includes(".html#") || href.startsWith("index.html") || href.startsWith("projects.html"));
+  return href && (
+    href.endsWith(".html") ||
+    href.includes(".html#") ||
+    href.startsWith("index.html") ||
+    href.startsWith("projects.html")
+  );
 }
 
 document.querySelectorAll("a.navlink").forEach((a) => {
@@ -33,15 +38,19 @@ document.querySelectorAll("a.navlink").forEach((a) => {
     const href = a.getAttribute("href");
     if (!href) return;
 
-    // allow normal behavior for external / mailto / tel / pdf
-    if (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:") || href.endsWith(".pdf")) return;
+    // Allow normal behavior for external / mailto / tel / pdf / anchors
+    if (
+      href.startsWith("http") ||
+      href.startsWith("mailto:") ||
+      href.startsWith("tel:") ||
+      href.endsWith(".pdf") ||
+      href.startsWith("#")
+    ) return;
 
     if (isInternalHtmlLink(href)) {
       e.preventDefault();
       document.body.classList.add("fade-out");
-      setTimeout(() => {
-        window.location.href = href;
-      }, 220);
+      setTimeout(() => (window.location.href = href), 220);
     }
   });
 });

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Alhanof | Portfolio</title>
+  <title>Alhanof Alfadhel | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -13,9 +13,9 @@
       <a class="logo navlink" href="index.html">Alhanof</a>
 
       <nav class="links">
-        <a class="navlink" href="index.html">About</a>
+        <a class="navlink" href="#about">About</a>
         <a class="navlink" href="projects.html">Projects</a>
-        <a class="navlink" href="cv.pdf" target="_blank" rel="noreferrer">Resume</a>
+        <a class="navlink resume-link" href="cv.pdf" target="_blank" rel="noreferrer">Resume</a>
         <a class="navlink" href="#contact">Contact</a>
       </nav>
 
@@ -23,9 +23,9 @@
     </div>
 
     <div class="mobile-links container" id="mobileLinks">
-      <a class="navlink" href="index.html">About</a>
+      <a class="navlink" href="#about">About</a>
       <a class="navlink" href="projects.html">Projects</a>
-      <a class="navlink" href="cv.pdf" target="_blank" rel="noreferrer">Resume</a>
+      <a class="navlink resume-link" href="cv.pdf" target="_blank" rel="noreferrer">Resume</a>
       <a class="navlink" href="#contact">Contact</a>
     </div>
   </header>
@@ -33,46 +33,91 @@
   <main id="top">
     <!-- HERO -->
     <section class="hero">
-      <div class="container hero-grid">
+      <div class="container hero-grid hero-grid--simple">
         <div class="reveal">
-          <p class="pill">Computer Science Graduate • AI • System Analysis • UX/UI</p>
-
-          <h1>
-            Hi, I'm <span class="accent">Alhanof</span>.<br />
-            I build intelligent & user-centered solutions.
-          </h1>
-
+          <h1 class="name-title">Alhanof Alfadhel</h1>
           <p class="subtitle">
-            A portfolio showcasing AI work, product thinking, system documentation, and interface design.
+            Computer Science Graduate • AI • System Analysis • UX/UI
           </p>
 
           <div class="cta">
-            <a class="btn navlink" href="projects.html">View Projects</a>
-            <a class="btn ghost" href="cv.pdf" target="_blank" rel="noreferrer">Resume</a>
-          </div>
-
-          <div class="mini">
-            <a href="https://github.com/alhanof4f" target="_blank" rel="noreferrer">GitHub</a>
-            <span>•</span>
-            <a href="https://www.linkedin.com/in/alhanof-alfadhel" target="_blank" rel="noreferrer">LinkedIn</a>
-            <span>•</span>
-            <a href="mailto:alhanofx2@gmail.com">Email</a>
-            <span>•</span>
-            <a href="tel:+966536779383">Phone</a>
+            <a class="btn resume-cta" href="cv.pdf" target="_blank" rel="noreferrer">View Resume</a>
+            <a class="btn ghost navlink" href="projects.html">Projects</a>
           </div>
         </div>
 
         <div class="card hero-card reveal">
           <h3>Featured</h3>
           <p class="muted">
-            Basira — AI-supported early autism indicators detection using eye-tracking.
+            Basira — Landing page for an AI-supported early autism indicators project.
           </p>
-
           <div class="card-actions">
-            <a class="btn small" href="https://alhanof4f.github.io/baseera-landing/" target="_blank" rel="noreferrer">
-              View Basira
-            </a>
+            <a class="btn small" href="https://alhanof4f.github.io/baseera-landing/" target="_blank" rel="noreferrer">View Landing</a>
             <a class="btn small ghost navlink" href="projects.html">All Projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="reveal">About Me</h2>
+
+        <p class="about-text reveal">
+          Computer Science graduate specializing in Artificial Intelligence and Data Analysis, with strong experience
+          in system analysis, machine learning, and building smart data-driven solutions.
+        </p>
+
+        <p class="about-text reveal">
+          I am passionate about creating intelligent systems that solve real-world problems using data and AI. My experience
+          includes developing AI-based projects, analyzing data patterns, and designing technical solutions that improve
+          decision-making and user experience. I have hands-on skills in Python, SQL, Power BI, machine learning, and system
+          documentation. I also led the development of an AI-based autism detection project using eye-tracking technology,
+          demonstrating my ability to combine innovation, research, and practical implementation.
+        </p>
+
+        <div class="grid-2">
+          <div class="card reveal">
+            <h3>Core Focus</h3>
+            <ul>
+              <li>Artificial Intelligence & ML</li>
+              <li>System Analysis & Documentation (SRS/BRS)</li>
+              <li>UX/UI Design for practical products</li>
+              <li>Building solutions that improve user experience</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3>Tools</h3>
+            <div class="tags">
+              <span>Python</span><span>SQL</span><span>Power BI</span><span>Excel</span>
+              <span>Git/GitHub</span><span>Machine Learning</span><span>System Docs</span>
+              <span>UI/UX</span><span>Figma</span><span>VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME (Prominent) -->
+    <section class="section" id="resume">
+      <div class="container">
+        <h2 class="reveal">Resume</h2>
+
+        <div class="card resume-card reveal">
+          <div class="resume-card-inner">
+            <div>
+              <h3 class="resume-title">Alhanof Alfadhel — Resume</h3>
+              <p class="muted resume-sub">
+                Download or open the PDF version.
+              </p>
+            </div>
+
+            <div class="resume-actions">
+              <a class="btn resume-cta" href="cv.pdf" target="_blank" rel="noreferrer">Open PDF</a>
+              <a class="btn ghost" href="cv.pdf" download>Download</a>
+            </div>
           </div>
         </div>
       </div>
@@ -104,151 +149,22 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="section" id="about">
-      <div class="container">
-        <h2 class="reveal">About Me</h2>
-
-        <p class="lead reveal">
-          Computer Science graduate specializing in Artificial Intelligence, with strong experience in system analysis,
-          machine learning, and building smart solutions.
-        </p>
-
-        <p class="about-text reveal">
-          I am passionate about creating intelligent systems that solve real-world problems using data and AI.
-          My experience includes developing AI-based solutions, analyzing patterns, and designing technical approaches
-          that improve decision-making and user experience. I have hands-on skills in Python, SQL, Power BI,
-          machine learning, and system documentation. I’m known for being detail-oriented, curious, and focused on
-          continuous learning and delivering high-quality results.
-        </p>
-
-        <div class="grid-2">
-          <div class="card reveal">
-            <h3>What I do</h3>
-            <ul>
-              <li>AI prototypes & model improvement</li>
-              <li>System analysis & structured documentation (SRS/BRS)</li>
-              <li>UX/UI design for web & mobile interfaces</li>
-              <li>Building practical, user-focused digital solutions</li>
-            </ul>
-          </div>
-
-          <div class="card reveal">
-            <h3>Strengths</h3>
-            <ul>
-              <li>Problem solving & analytical thinking</li>
-              <li>Clean communication & teamwork</li>
-              <li>Attention to detail</li>
-              <li>Product mindset + user empathy</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AWARDS -->
-    <section class="section">
-      <div class="container">
-        <h2 class="reveal">Awards</h2>
-
-        <div class="cards two reveal">
-          <article class="card">
-            <h3>1st Place — Most Popular Project</h3>
-            <p class="muted">Recognized for strong engagement and impact.</p>
-          </article>
-
-          <article class="card">
-            <h3>2nd Place — Innovation Incubator Competition</h3>
-            <p class="muted">Awarded for innovation, solution quality, and presentation.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section class="section">
-      <div class="container">
-        <h2 class="reveal">Certifications</h2>
-
-        <div class="card reveal">
-          <ul class="cols">
-            <li>Certified GRC Professional (GRCP™) — OCEG</li>
-            <li>Power BI — Satr Platform</li>
-            <li>Python Training Certificates</li>
-            <li>Introduction to Data Science — Satr Platform</li>
-            <li>Data Science using Python — Coursera</li>
-            <li>Cybersecurity, Risk, and Compliance — Cypher</li>
-            <li>Governance, Risk, and Compliance — Cypher</li>
-            <li>UI/UX Bootcamp — Participation Certificate</li>
-            <li>CS50x: Introduction to Computer Science — Harvard</li>
-            <li>AI for Everyone — Master the Basics</li>
-            <li>English Language Course — Afaq Academy</li>
-            <li>Additional workshops & courses</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="section" id="skills">
-      <div class="container">
-        <h2 class="reveal">Skills</h2>
-
-        <div class="grid-3 reveal">
-          <div class="card">
-            <h3>Technical</h3>
-            <ul>
-              <li>Python</li>
-              <li>SQL</li>
-              <li>Machine Learning</li>
-              <li>Model Evaluation</li>
-              <li>Feature Engineering</li>
-              <li>Git / GitHub</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Design</h3>
-            <ul>
-              <li>UX/UI Design</li>
-              <li>Wireframing</li>
-              <li>Prototyping</li>
-              <li>User-Centered Design</li>
-              <li>Design Systems</li>
-              <li>Responsive Web UI</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Professional</h3>
-            <ul>
-              <li>System Analysis</li>
-              <li>SRS / BRS Documentation</li>
-              <li>Communication</li>
-              <li>Teamwork</li>
-              <li>Problem Solving</li>
-              <li>Time Management</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- PROJECTS PREVIEW -->
     <section class="section" id="projects">
       <div class="container">
         <div class="row reveal">
-          <h2>Projects Preview</h2>
-          <a class="btn small navlink" href="projects.html">Open All Projects</a>
+          <h2>Projects</h2>
+          <a class="btn small navlink" href="projects.html">View All</a>
         </div>
 
         <div class="cards reveal">
           <article class="card project">
+            <img class="thumb" src="assets/basira.png" alt="Basira preview" />
             <div class="project-head">
-              <h3>Basira (AI • Eye Tracking)</h3>
-              <span class="badge">Featured</span>
+              <h3>Basira (Landing)</h3>
+              <span class="badge">Live</span>
             </div>
-            <p class="muted">AI-supported early autism indicators detection using eye-tracking.</p>
+            <p class="muted">Landing page only — the full platform is private.</p>
             <div class="project-actions">
               <a class="btn small" href="https://alhanof4f.github.io/baseera-landing/" target="_blank" rel="noreferrer">View</a>
               <a class="btn small ghost navlink" href="projects.html">Details</a>
@@ -256,22 +172,24 @@
           </article>
 
           <article class="card project">
+            <img class="thumb" src="assets/a1.png" alt="AllergyBud preview" />
             <div class="project-head">
               <h3>AllergyBud</h3>
-              <span class="badge">Showcase</span>
+              <span class="badge">App</span>
             </div>
-            <p class="muted">UI mockup preview (work in progress).</p>
+            <p class="muted">Personalized allergy assistant application concept.</p>
             <div class="project-actions">
               <a class="btn small ghost navlink" href="projects.html">Details</a>
             </div>
           </article>
 
           <article class="card project">
+            <img class="thumb" src="assets/helptrip.jpg" alt="Help Trip preview" />
             <div class="project-head">
               <h3>Help Trip (UI/UX)</h3>
               <span class="badge">Design</span>
             </div>
-            <p class="muted">App interface screens and user flow design.</p>
+            <p class="muted">Interface screens and user flow design.</p>
             <div class="project-actions">
               <a class="btn small ghost navlink" href="projects.html">Details</a>
             </div>
@@ -280,26 +198,41 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT (icons only) -->
     <section class="section" id="contact">
       <div class="container">
         <h2 class="reveal">Contact</h2>
 
-        <div class="card contact-card reveal">
-          <p class="lead">
-            For opportunities, collaboration, or inquiries:
-          </p>
+        <div class="card contact-icons-card reveal">
+          <div class="icon-row">
+            <a class="icon-btn" href="mailto:alhanofx2@gmail.com" aria-label="Email">
+              <!-- mail icon -->
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 6h16v12H4V6zm8 7L5.5 8.5v-.5h13v.5L12 13z"></path>
+              </svg>
+            </a>
 
-          <div class="contact-links">
-            <a class="btn" href="mailto:alhanofx2@gmail.com">Email</a>
-            <a class="btn ghost" href="https://github.com/alhanof4f" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="btn ghost" href="https://www.linkedin.com/in/alhanof-alfadhel" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="btn ghost" href="tel:+966536779383">Phone</a>
+            <a class="icon-btn" href="https://www.linkedin.com/in/alhanof-alfadhel" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <!-- linkedin icon -->
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.94 6.5A1.94 1.94 0 1 1 3 6.5a1.94 1.94 0 0 1 3.94 0ZM3.5 21h3V9h-3v12ZM9 9h2.9v1.64h.04c.4-.76 1.39-1.56 2.86-1.56 3.06 0 3.63 2.02 3.63 4.64V21h-3v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9V9Z"></path>
+              </svg>
+            </a>
+
+            <a class="icon-btn" href="https://github.com/alhanof4f" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <!-- github icon -->
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 .5a11.5 11.5 0 0 0-3.64 22.4c.58.1.8-.25.8-.56v-2c-3.26.7-3.95-1.38-3.95-1.38-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.6-.3-5.33-1.3-5.33-5.8 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.5.12-3.12 0 0 .98-.32 3.2 1.2a11 11 0 0 1 5.82 0c2.22-1.52 3.2-1.2 3.2-1.2.64 1.62.24 2.82.12 3.12.75.82 1.2 1.87 1.2 3.15 0 4.52-2.74 5.5-5.35 5.8.41.36.78 1.07.78 2.17v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"></path>
+              </svg>
+            </a>
+
+            <a class="icon-btn" href="tel:+966536779383" aria-label="Phone">
+              <!-- phone icon -->
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.6 10.8c1.2 2.4 3.1 4.3 5.5 5.5l1.8-1.8c.2-.2.5-.3.8-.2 1 .3 2 .5 3.1.5.4 0 .7.3.7.7V20c0 .4-.3.7-.7.7C10 20.7 3.3 14 3.3 5.7c0-.4.3-.7.7-.7h3.6c.4 0 .7.3.7.7 0 1.1.2 2.1.5 3.1.1.3 0 .6-.2.8l-1.7 1.9Z"></path>
+              </svg>
+            </a>
           </div>
-
-          <p class="muted small">
-            Resume is available via the “Resume” button in the top menu.
-          </p>
         </div>
       </div>
     </section>
