@@ -1,135 +1,72 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tea World | Home</title>
+  <head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Tea | Home</title>
+    <script>
 
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
-
-  <script>
     function play_sound(url) {
-      try { new Audio(url).play(); } catch (e) {}
+      new Audio(url).play();
     }
-  </script>
-</head>
+    </script>
+  </head>
+  <body>
 
-<body>
-  <!-- NAV -->
-  <nav class="navbar navbar-expand-lg navbar-dark nav-glass sticky-top">
-    <a class="navbar-brand font-weight-bold" href="index.html">Tea World</a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navTea"
-      aria-controls="navTea" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navTea">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="Types.html">Types</a></li>
-        <li class="nav-item"><a class="nav-link" href="uses.html">Uses</a></li>
-        <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
-      </ul>
-
-      <!-- optional sound -->
-      <button onclick="play_sound('assets/trees.mp3')" type="button" class="btn btn-outline-light btn-sm d-flex align-items-center">
-        <span class="mr-2">Ambient</span>
-        <span aria-hidden="true">♪</span>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html"><b>Tea world</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-    </div>
-  </nav>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Types.html">Types of Tea</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="uses.html">Uses</a>
+          <li class="nav-item">
+            <a class="nav-link" href="resources.html">Resources</a>
+          </li>
+        </ul>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <span class="pill">Tea • Culture • Health</span>
-        <h1 class="display-4 font-weight-bold mb-3">Tea World</h1>
-        <p class="lead mb-4">
-          Explore tea types, benefits, and resources in a clean, modern experience.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-tea mr-2" href="Types.html">Explore Types</a>
-          <a class="btn btn-outline-light" href="uses.html">Health & Uses</a>
-        </div>
-
-        <div class="mini-links mt-4">
-          <a href="resources.html">Sources</a>
-          <span>•</span>
-          <a href="#history">History</a>
-        </div>
+        <button onclick="play_sound('trees.mp3')" type="button" class="btn btn-outline-info"><img src="images/p3.jpg" alt="tea" width="50"></button>
       </div>
+    </nav>
 
-      <div class="hero-card glass-card">
-        <div class="hero-card-img"
-          style="background-image:url('https://images.unsplash.com/photo-1515825838458-f2a94b20105a?auto=format&fit=crop&w=1200&q=80');">
-        </div>
-        <div class="p-3">
-          <h5 class="mb-1">Featured</h5>
-          <p class="muted mb-0">A quick intro to tea definition & history.</p>
-        </div>
-      </div>
-    </div>
-  </header>
+    <!-- Homepage content -->
+    <h1 style= "margin-left: 200pt;">Tea World!</h1>
+    <h4 style= "margin-left: 200pt;">Here you will find everything related to Tea world!</h4>
+    <img class ="indent_img" src="images/p4.jpg" alt="Tea" height="400" width="400">
+    <h4 class="indent" style="margin-top: 25px; margin-bottom: 20px;">Definition:</h4>
+    <hr class="solid">
+    <p class="indent" style="padding-bottom: 30px">
+      Tea is an aromatic beverage prepared by pouring hot or boiling water over cured or fresh leaves of
+      Camellia sinensis, an evergreen shrub native to East Asia which probably originated in the borderlands
+      of southwestern China and northern Myanmar.Tea is also made, but rarely, from the leaves of Camellia
+       taliensis.After plain water, tea is the most widely consumed drink in the world.There are many
+       different types of tea; some have a cooling, slightly bitter, and astringent flavour,
+       while others have profiles that include sweet, nutty, floral, or grassy notes.
 
-  <!-- CONTENT -->
-  <main class="section">
-    <div class="container">
-      <div class="grid-2">
-        <section class="glass-card p-4">
-          <h2 class="h4 mb-3">Definition</h2>
-          <p class="muted">
-            Tea is an aromatic beverage prepared by pouring hot or boiling water over cured or fresh leaves of
-            <em>Camellia sinensis</em>. It’s the most widely consumed drink in the world after water, with flavors
-            ranging from sweet and floral to grassy and roasted.
-          </p>
-        </section>
+         <em>also,</em> Tea has a stimulating effect in humans primarily due to its caffeine content.<br><br>
 
-        <section class="glass-card p-4" id="history">
-          <h2 class="h4 mb-3">History</h2>
-          <p class="muted mb-3">
-            Tea spread across cultures for thousands of years. It originated in southwestern China and later became popular
-            in Europe, especially Britain in the 17th century, shaping global tea trade and traditions.
-          </p>
-          <div class="small-note">
-            Tip: Add your own photos later inside <code>tworld/assets/</code>.
-          </div>
-        </section>
-      </div>
+         <h4 class="indent" style="margin-top: 25px; margin-bottom: 20px;">History of Tea:</h4>
+    <hr class="solid">
+    <p class="indent" style="padding-bottom: 30px">
+      he history of tea is long and complex, as tea has spread over thousands of years in several cultures.
+       Tea originated in southwestern China during the Shang Dynasty as a medicinal beverage. The oldest
+       reliable record of the tea drink has been dated to the 3rd century AD in a medical text written by Hua Tu.
+        The idea of tea was introduced to Portuguese priests and merchants during the 1500s. Tea became a popular drink
+        in Britain during the seventeenth decade.
 
-      <div class="mt-4 glass-card p-4">
-        <h2 class="h4 mb-3">Quick Highlights</h2>
-        <div class="highlights">
-          <div class="hl">
-            <div class="hl-title">Popular Types</div>
-            <div class="hl-body">White • Green • Oolong • Black • Puerh</div>
-          </div>
-          <div class="hl">
-            <div class="hl-title">Why People Love It</div>
-            <div class="hl-body">Taste variety • Ritual • Warmth • Focus</div>
-          </div>
-          <div class="hl">
-            <div class="hl-title">Explore More</div>
-            <div class="hl-body">Videos + sources in Resources</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center flex-wrap">
-        <span>© Tea World</span>
-        <span class="muted">Built by Alhanof</span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS (for navbar toggle) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+         <em>However,</em> The British offered tea production as well as consumption to India to
+         compete with the Chinese monopoly regarding tea.<br><br>
+         <img class ="indent_img" src="images/m.jpg" alt="Tea" height="300" width="400">
+         <h6 style="margin-left: 200pt; margin-top: 15px"><em>"Tea plantation in Ciwidey, Bandung, Indonesia"</em></h6>
+    </p>
+  </body>
 </html>
